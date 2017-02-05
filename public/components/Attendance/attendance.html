@@ -1,0 +1,88 @@
+<div class="card x_panel" cg-busy="{promise:promiseMenteeList,templateUrl:'/assets/libs/angular-busy/angular-busy.html',minDuration:0}">
+  <h1 class="page-header">Attendance</h1>
+  <div class="x_content" cg-busy="{promise:promiseAttendancePost,templateUrl:'/assets/libs/angular-busy/angular-busy.html',minDuration:0, message:'Saving...'}">
+    <div class="row">
+      <div class="col-md-12" class="btn btn-link" data-toggle="collapse" data-target="#newAttendance">
+        <h3><i class="fa fa-plus" style="margin-right: 15px;"></i> New Attendance Entry </h3>
+      </div>
+    </div>
+    <div class="row collapse in" id="newAttendance">
+      <form name='attendance' class="form-horizontal">
+        <div class="form-group">
+          <label for="newEvent" class="col-md-2 control-label">Event:</label>
+          <div class="col-md-8">
+            <select ng-init="newEvent = 'Friday'" ng-model="newEvent" id="newEvent" class="form-control" ng-required="true">
+			  <option value="Friday" selected>DREAM Friday/Program Time</option>
+              <option value="Camp">Camp</option>
+              <option value="Community Event">Community Event</option>
+              <option value="Culminating">Columinating</option>
+			  <option value="MiT Meeting">MiT Meeting</option>
+			  <option value="MiT / Mentor Meeting">MiT / Mentor Meeting</option>
+			  <option value="MiT Retreat">MiT Retreat</option>
+			  <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="eventDate" class="col-md-2 control-label">Date:</label>
+          <div class="col-md-8">
+            <input type="date" id="eventDate" ng-model="newDate" ng-required="true" class="form-control">
+          </div>
+        </div>
+        <div class="form-group" style="padding-left:20px;">
+          <div ng-repeat="mentee in menteesList" class="checkbox">
+            <div class="col-md-offset-2">
+              <label>
+                <input type="checkbox" id="{{mentee.Id}}" value="{{mentee.Id}}"/> {{mentee.Name}}
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="text-center">
+            <button type="submit" class="btn btn-default" ng-click="attendance.$valid && save()">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="card" cg-busy="{promise:promiseAttendanceList,templateUrl:'/assets/libs/angular-busy/angular-busy.html',minDuration:0}">
+  <div class="row">
+    <div class="col-md-12" class="btn btn-link" data-toggle="collapse" data-target="#previousEntries">
+      <h3><i class="fa fa-align-left" style="margin-right: 15px;"></i>Previous Attendance Entries</h3>
+    </div>
+  </div>
+  <div class="row collapse in" style="margin-top: 20px;" id="previousEntries">
+    
+    <!-- start accordion -->
+    <div class="accordion" role="tablist" aria-multiselectable="true" ng-repeat="post in attendance_entries">
+      <div class="panel-heading collapsed" role="tab" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne" data-target="#attendance{{$index}}">
+        <h4 class="panel-title">Date: {{post.date}} <span style="padding:10px"></span> Event Name: {{post.summary}}</h4>
+      </div>
+      <div id="attendance{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <div class="entry collapse" id="entry{{$index}}">
+            <div ng-repeat="(key,value) in post.entry">
+			  <div ng-if="key != 'Id'">
+                <div ng-if="value.present" style="padding-bottom:12px;">
+                  <span class="label label-success" style="padding-left: 12px; padding-right:10px;">Here</span> {{value.Name}} 
+                </div>
+                <div ng-if="!value.present" style="padding-bottom:10px;">
+                  <span class="label label-danger" >Absent</span> {{value.Name}} 
+                </div>
+			  </div>
+            </div>
+
+          </div>
+          <br/>
+          <button type="button" class="collapsed btn btn-default" data-toggle="collapse" data-target="#entry{{$index}}">View Entry &raquo;</button>
+          <button type="button" class="btn btn-default" ng-click="edit(this)">Edit</button>
+        </div>
+      </div>
+      <!-- end of accordion -->
+    </div>
+  </div>
+</div>

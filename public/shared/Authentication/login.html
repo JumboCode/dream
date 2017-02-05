@@ -1,0 +1,18 @@
+<!-- public/Session/login-form.html -->
+
+<div class="login-page">
+    <h1>DREAM</h1>
+  <div class="form">
+    <form class="login-form">
+      <input type="email" class="form-control" id="username" placeholder="email" name="username" ng-model="user.username"/>
+      <input type="password" class="form-control" id="password" placeholder="password" name="password" ng-model="user.password"/>
+      <button type="submit" ng-click='login(user)' class="btn btn-primary">Log in</button>
+      <div class="message"> <a ui-sref='authentication.register' class="btn btn-link">Create an account</a></div>
+      <div class="message"><a ui-sref='authentication.reset' class="btn btn-link">Reset Password</a></div>
+       <div class="alert alert-danger" ng-show="reserror != '' ">
+        <strong>Error: </strong> {{reserror}}
+      </div>
+    </form>
+  </div>
+</div>
+

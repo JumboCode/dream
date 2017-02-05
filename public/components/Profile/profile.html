@@ -1,0 +1,89 @@
+
+<div class="col-md-12 card x_panel">
+<!--
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <img src="assets/img/samuel.jpg" alt="..." class="img-square img-responsive" style="max-height:250px">
+  </div>
+-->
+  <div class="col-md-6 col-sm-6 col-xs-6" cg-busy="{promise:promise,templateUrl:'/assets/libs/angular-busy/angular-busy.html',minDuration:0}">
+    <h3> {{mentor.firstname}} {{mentor.lastname}}'s Profile</h3> 
+    <a class="btn message" ui-sref='root.changep'>Change Password</a>
+    <br><a class="btn message" ng-click='deleteUser()'>Delete User</a>
+  </div>
+</div>
+
+<!-- info input -->
+<div class="col-md-6 card x_panel" cg-busy="{promise:promise,templateUrl:'/assets/libs/angular-busy/angular-busy.html',minDuration:0}">
+  <div class="card_title">
+    <h2>Profile Info </h2>
+  </div>
+  <form name="profileForm">
+    <div class="row" style="margin-bottom: 10px;">
+      <div class="col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 10px;">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user"></i></span>
+          <input type="text" class="form-control" name="mentorFirst" id="mentorFirst" placeholder="{{mentor.firstname}}" ng-model="newFirst" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon2"><i class="fa fa-user"></i></span>
+          <input type="text" class="form-control" name="mentorLast" id="mentorLast" placeholder="{{mentor.lastname}}" ng-model="newLast" aria-describedby="basic-addon2">
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-bottom: 10px;">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon4"><i class="fa fa-phone"></i></span>
+          <input type="text" class="form-control" name="mentorPhone" placeholder="{{mentor.phone}}" ng-model="newPhone" aria-describedby="basic-addon4">
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon6"><i class="fa fa-home"></i></span>
+          <input type="text" class="form-control" name="mentorAddress" placeholder="{{mentor.address}}" ng-model="newAddress" aria-describedby="basic-addon6">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Emergency contact -->
+<div class="col-md-6 card x_panel" cg-busy="{promise:promise,templateUrl:'/assets/libs/angular-busy/angular-busy.html',minDuration:0}">
+  <div class="card_title">
+    <h2>Emergency Contacts </h2>
+  </div>
+  <form name="emergency" ng-if="contacts.length != 0">
+    <div ng-repeat="contact in contacts">
+      <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 10px;">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon5"><i class="fa fa-user"></i></span>
+          <input type="text" class="form-control" name="name{{$index}}" id="name{{$index}}" placeholder="{{contact.name}}" ng-model="newName[$index]" aria-describedby="basic-addon5">
+        </div>
+      </div>
+      <div ng-switch on="$last">
+        <div ng-switch-when="false">
+          <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 2px solid #E6E9ED;">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon5"><i class="fa fa-user"></i></span>
+              <input type="text" class="form-control" name="email{{$index}}" id="email{{$index}}" placeholder="{{contact.phone}}" ng-model="emergEmail[$index]" aria-describedby="basic-addon5">
+            </div>
+          </div>
+        </div>
+        <div ng-switch-default>
+          <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 10px; padding-bottom: 10px;">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon5"><i class="fa fa-user"></i></span>
+            <input type="text" class="form-control" name="email{{$index}}" id="email{{$index}}" placeholder="{{contact.phone}}" ng-model="emergEmail[$index]" aria-describedby="basic-addon5">
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div ng-if="contacts.length == 0">
+    <h3>No emergency contact information available.</h3>
+  </div>
+</div>

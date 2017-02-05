@@ -1,0 +1,16 @@
+<!-- public/Authentication/changeemail.html -->
+
+<div class="register-page">
+    <h1>DREAM</h1>
+  <div class="form">
+    <form id="register-form" role="form">
+      <input type="email" class="form-control" id="oldusername" placeholder="old email" name="oldusername" ng-model="user.oldusername"/>
+      <input type="email" class="form-control" id="newusername" placeholder="new email" name="newusername" ng-model="user.newusername"/>
+      <input type="password" class="form-control" id="password" placeholder="password" name="password" ng-model="user.password"/>
+      <button type="submit" ng-click='changeEmail(user)' class="btn btn-primary btn-block">Change Email</button>
+      <div class="alert alert-danger" ng-show="reserror != '' ">
+        <strong>Error: </strong> {{reserror.data.code}}
+      </div>
+    </form>
+  </div>
+</div>

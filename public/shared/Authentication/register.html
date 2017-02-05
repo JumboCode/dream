@@ -1,0 +1,20 @@
+<!-- public/Authentication/register.html -->
+
+<div class="register-page">
+    <h1>DREAM</h1>
+  <div class="form">
+    <form id="register-form" role="form">
+      <input type="email" class="form-control" id="username" placeholder="email" name="username" ng-model="user.username"/>
+<!--
+      <input type="password" class="form-control" id="password" placeholder="password" name="password" ng-model="user.password"/>
+      <input type="password" class="form-control" id="password2" placeholder="repeat password" name="password2" ng-model="user.password2"/>
+-->
+      <button type="submit" ng-click='register(user)' class="btn btn-primary btn-block">Register</button>
+      <div class="message">Already have an account?<a ui-sref='authentication.login' class="btn btn-link">Log in</a></div>
+      <div class="message"><a ui-sref='authentication.reset' class="btn btn-link">Reset Password</a></div>
+      <div class="alert alert-danger" ng-show="reserror != '' ">
+        <strong>Error: </strong> {{reserror}}
+      </div>
+    </form>
+  </div>
+</div>

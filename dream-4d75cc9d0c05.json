@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dream-ca566",
+  "private_key_id": "4d75cc9d0c05e8e22afaebe5b42a60211f9d7664",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDQ2X+RCnwWnZYP\nbLCR+s2qiR7B2TZBIGm3w5IirE4dO3bDTJRyS/lDw13S115ueP1giMDYlbnH4S3G\nYOlA0iR7XNgDddD3CnDwvyC7dfqVy329p4dZ4USdKteBKhI0jESCCwZW+XdG6bmx\nOCAo2WbsF1XECs5eYK1xEKgSe3i0Nl9+0X2LjlYrnoBau/iECFgJQCfHl+ZM5jc6\nxHVn3XxkCnvRLr815739jglosNhQC4PsMm9pNjqx2vpP7IvtzWmRomKwAT4Z04zX\nNPPnWg0sTYeHwry39RCTLAUNgP2QBihfBz6Kuv4Ae64pLOqqnuJqa6Yeovch1RBy\nm3ws0AbNAgMBAAECggEAEcqlimaZQZf1I6U/uX/jK2b4/syRSaUIPIZlmZySHv1k\n1ahdcQs11eb7xC1itwiJlUKxIwJGTFfLfX3eAQ6l2viC0nCj95elHW06zZ10VnR6\nZsCx0B9XqAfxSeiamm1knKtxw9EGrzzT+9vrKW+zy+MFBGljQTj9LYecuc5Y7wkX\nLwD8ODRcWvkIO8nWGdEF+8GD6ye3KYNU2pA8/3gGxXaCpNMC3AARIbmmTaBSmCJs\n7apavpvMyM7ZrLzrPRPcQlpRHlsnqxA1hPAOCNOb86V9L5yTPf5Xj1TS4OdZeFCK\n0wnNP4G3w/SnD6/z+9WkY7trqAe1cCDCJ4ycIEV2ZQKBgQD+rWbhkWnqloR/ONOL\nZ6YGutMTCp54EraSYZYjsAUyrvzMMdiuH4J5pb98JJ+NnWI6oBzJcR4fuGZWdprE\ngYEaIQVW7G+rDnM9i/CiUFDIVTzQZXTSlS1tq9nyD6cbNeMuOHyOXYq1oTnqjzIA\nOFKOGypbyEApCx5l9OSuG90uzwKBgQDR7yrolu9AGRiS0TPcOtM30mpYP+ce2Cyx\nR4vJ6d6yRs8LltLBwqulYOVW9nRquoBWFg5ieXe82u8XsZVGwiGa82gzfPEWCa9t\nF5BMmO662vFQO/KJCbeP72tIstMI7iavVj8bx87gnuHiN02DVOxZA+0tYhuSt0iP\nDnv9ZHd3owKBgDBndK5anO7hPL2RZ2OPh5av2346/nOD2v9nXMnboqFHcPS+ZJhz\nlLDaN9K4gzq/NvQ9ijsfLMKKoai9Uh0XIBp/PCyRM4gnbu+7sTioWzI4QR66qcF8\naO33Q60mHHSngU4/nizQypRK2F8kaDRyf/5SW3KmVMt4OYbXTL9qvFcxAoGAc4h/\nAb/G7WyiRHJTaxkIksj+85A/fo8TkYDBYp6Ni2lCmqsnU7Dxy7LWpBRAH1iCNl4v\nDmyww8NtH4oAkA9YdTENoIBbIXi1DYGRTUZA456IfVJweJBbcCAf18NqNpjxuz7o\nvj4pER7/SwKKawN6isaJaZd7ezPY/7nF7L60rKcCgYEA4HbqOhKDm0RFFF5qJfR8\nrR+zQeyHCDded5KnemoQzNkkJ8ze/m0ftapsVNJ2UY6Nke/IzMUW7HnrCD9KX8ej\nlU23Ge8D1bxD5E9ezw6T14cEpAS7c4kC13adlIKcsVJxbUao5J0hup/72/pqPjhK\njhtT3eR6fDrsZROaYZG9o8s=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dream-app-node-server@dream-ca566.iam.gserviceaccount.com",
+  "client_id": "109340732441821213756",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dream-app-node-server%40dream-ca566.iam.gserviceaccount.com"
+}

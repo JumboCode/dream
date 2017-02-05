@@ -1,0 +1,70 @@
+<!-- public/Authentication/authentication.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <base href="/" />       <!-- Necessary for HTML5Mode(true) -->
+  <title>The Dream App</title>
+
+  <!-- TODO: there must be a better way than to include everything in every file... -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/static/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/font-awesome/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/assets/libs/justified-gallary/dist/css/justifiedGallery.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/libs/angular-busy/angular-busy.css" />
+   
+  <!-- JS -->
+  <script type="text/javascript" src="/static/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/static/angular-ui-router/release/angular-ui-router.min.js"></script> 
+  <script type="text/javascript" src="/static/jquery/dist/jquery.min.js"></script> 
+  <script type="text/javascript" src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/libs/angular-busy/angular-busy.js"></script>
+  <script type="text/javascript" src="/assets/libs/firebase.js"></script>
+
+  <!-- ANGULAR CUSTOM -->
+  <script type="text/javascript" src="app.module.js"></script>
+  <script type="text/javascript" src="app.routes.js"></script>
+
+  <script type="text/javascript" src="shared/NavTop/NavTopModule.js"></script> 
+  <script type="text/javascript" src="shared/NavTop/NavTopController.js"></script>
+
+  <script type="text/javascript" src="shared/NavLeft/NavLeftModule.js"></script> 
+  <script type="text/javascript" src="shared/NavLeft/NavLeftController.js"></script>
+
+  <script type="text/javascript" src="shared/Authentication/AuthenticationModule.js"></script> 
+  <script type="text/javascript" src="shared/Authentication/AuthenticationController.js"></script>
+  <script type="text/javascript" src="shared/Authentication/AuthenticationService.js"></script>
+
+  <script type="text/javascript" src="components/Home/HomeModule.js"></script>
+  <script type="text/javascript" src="components/Home/HomeController.js"></script>
+  <script type="text/javascript" src="components/Home/justified-gallary/dist/js/jquery.justifiedGallery.js"></script>
+
+  <script type="text/javascript" src="components/Profile/ProfileModule.js"></script>
+  <script type="text/javascript" src="components/Profile/ProfileController.js"></script>
+
+  <script type="text/javascript" src="components/Attendance/AttendanceModule.js"></script>
+  <script type="text/javascript" src="components/Attendance/AttendanceController.js"></script>
+
+  <script type="text/javascript" src="components/MenteeInfo/MenteeInfoModule.js"></script>
+  <script type="text/javascript" src="components/MenteeInfo/MenteeInfoController.js"></script>
+
+  <script type="text/javascript" src="components/RequestChanges/RequestChangesModule.js"></script> 
+  <script type="text/javascript" src="components/RequestChanges/RequestChangesController.js"></script>
+
+  <script type="text/javascript" src="components/Relationships/RelationshipsModule.js"></script>
+  <script type="text/javascript" src="components/Relationships/RelationshipsController.js"></script>
+
+  <script type="text/javascript" src="components/Journal/JournalModule.js"></script>
+  <script type="text/javascript" src="components/Journal/JournalController.js"></script>
+
+</head>
+<body ng-app="dreamApp">
+  <div ui-view="content" class="col-md-offset-2 col-md-8 text-center" style="margin-top: 50px;"></div>
+</body>
+</html>

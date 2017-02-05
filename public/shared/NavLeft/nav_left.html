@@ -1,0 +1,35 @@
+<!-- to keep panel's position fixed:
+ http://stackoverflow.com/questions/28340054/bootstrap-keep-div-fixed-after-scrolling-to-it -->
+
+<div id="nav_left">
+  <div class="profile_pic center-block">
+    <img src="/assets/img/samuel.jpg" alt="..." class="img-circle profile_img">
+  </div>
+
+  <!-- alternatively, use pills - http://getbootstrap.com/components/#nav-pills -->
+  <div class="list-group" style="margin-top: 35px;">
+    <a class="list-group-item active" ui-sref="root">Home</a>
+    <div class="list-group-item" data-toggle="collapse" data-target="#mentees-collapsible">Mentee
+      <i class="fa fa-chevron-down" style="float: right;"></i>
+      <div id="mentees-collapsible" class="collapse">
+        <ul style="list-style-type: none; margin-top: 10px;">
+          <li><a ui-sref="root.mentee_info">Andrew Johnson</a></li>
+        </ul>
+      </div>
+    </div>
+    <a class='list-group-item' ui-sref="root.relationships"> Relationships </a>
+    <a class='list-group-item' ui-sref="root.journal"> Journal </a>
+    <a class="list-group-item" ui-sref="root.attendance">Attendance</a>
+    <a class="list-group-item" ui-sref="root.profile">Profile</a>
+    <div class="list-group-item" data-toggle="collapse" data-target="#dream-collapsible">Dream
+      <i class="fa fa-chevron-down" style="float: right;"></i>
+      <div id="dream-collapsible" class="collapse">
+        <ul style="list-style-type: none; margin-top: 10px;">
+          <li style="margin-bottom: 5px;"><a href="https://fs11.formsite.com/mfoote/receipts/index.html">Receipts</a></li>
+          <li><a href="http://www.dreamprogram.org/contact">Dream Central</a></li>
+        </ul>
+      </div>
+    </div>
+    <a class="list-group-item" ui-sref="root.request_changes">Request Changes</a>
+  </div>
+</div>

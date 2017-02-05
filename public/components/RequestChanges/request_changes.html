@@ -1,0 +1,17 @@
+<div class="card col-md-12">
+  <h3 class="page-header">Request Changes</h3>
+
+  <form class="form-horizontal" name="changes-form">
+    <div class="form-group">
+      <label for="entry" class="col-md-3 control-label">Request Changes Here:</label>
+      <div class="col-md-8">
+        <textarea type="text" class="form-control" rows="5" id="entry" ng-model="newEntry"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="text-center">
+        <div type="submit" class="btn btn-primary" ng-click="submit()">Submit</div>
+        <div class="btn btn-link" style="color: red;">Cancel - this does nothing yet</div>
+      </div>
+    </form>
+  </div>

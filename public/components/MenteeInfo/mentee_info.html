@@ -1,0 +1,145 @@
+<div ng-if="menteeData.length != 0" class="form-group col-md-12">
+	<select  class="form-control input-lg" style="max-width:250px;" ng-model="selectedMentee" ng-options="mentee as mentee.Name for mentee in menteeData" ng-change="loadMenteeInfo(selectedMentee)">
+		<option value=''>Select mentee to view data..</option>
+	</select>
+</div>
+
+<div class="col-md-6" cg-busy="{promise:promise,templateUrl:'/assets/libs/angular-busy/angular-busy.html',minDuration:0}">
+  <div class="card col-md-6 x_panel">
+    <div class="col-md-12" id="mentee-header" class="btn" ng-click="update_expanded('mentee-header', 'mentee-card')">
+          <h3>
+          <i class="fa fa-chevron-up"></i>
+          Mentee</h3>
+    </div> 
+    <div class="col-md-12 collapse in" style="margin-top: 20px;" id="mentee-card">
+      <table class="table table-responsive">
+        <tbody>
+          <tr>
+            <th scope="row">Name</th>
+            <td>{{mentee.name}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Age</th>
+            <td>{{mentee.age}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Gender</th>
+            <td>{{mentee.gender}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card col-md-6 x_panel" >
+    <div class="col-md-12" class="btn" id="personal-header"  ng-click="update_expanded('personal-header','personal-card')">
+          <h3>
+          <i class="fa fa-chevron-up"></i>
+          Personal Info</h3>
+    </div> 
+    <div class="col-md-12 collapse in" style="margin-top: 20px;" id="personal-card">
+      <table class="table table-responsive">
+        <tbody>
+          <tr>
+            <th scope="row">Household Language</th>
+            <td>{{personal.houseLang}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Address</th>
+            <td>{{personal.address}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td>{{personal.email}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Birthdate</th>
+            <td>{{personal.birthDate}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="col-md-6" cg-busy="{promise:promise,templateUrl:'/assets/libs/angular-busy/angular-busy.html',minDuration:0}">
+
+  <div class="card col-md-6 x_panel">
+    <div class="col-md-12" class="btn btn-link" id="health-header" ng-click="update_expanded('health-header','health-card')">
+      <h3>
+        <i class="fa fa-chevron-up"></i> 
+        Health Info</h3>
+    </div>
+    <div class="col-md-12 collapse in" style="margin-top: 20px;" id="health-card">
+      <table class="table table-responsive">
+        <tbody>
+          <tr>
+            <th scope="row">Physician Name</th>
+            <td>{{health.physician}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Physician Phone</th>
+            <td>{{health.physPhone}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Meds Being Taken</th>
+            <td>{{health.meds}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Able To Swallow Pills</th>
+            <td>{{health.swallowPills}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Medical Conditions</th>
+            <td>{{health.medConditions}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Allergies</th>
+            <td>{{health.allergies}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+	
+	<div class="card col-md-6 x_panel">
+	<div class="col-md-12" class="col-md-12 btn" id="emergency-header" ng-click="update_expanded('emergency-header','emergency-card')">
+		<h3><i class="fa fa-chevron-up"></i> Emergency Contacts </h3>
+	</div>
+<!--<div class="col-md-2" style="margin-top: 13px;">
+<div class="btn btn-link" data-toggle="collapse" data-target="#emergency_panel" ><i class="fa fa-chevron-up"></i></div>
+</div>-->
+<div class="col-md-12 collapse in" id="emergency-card" ng-if="emergency_contacts.length != 0">
+	<div ng-repeat="x in emergency_contacts" class="accordion" role="tablist" aria-multiselectable="true">
+		<div class="panel">
+			<div class="panel-heading collapsed" role="tab" data-toggle="collapse" aria-expanded="false" aria-controls="emergency_collapse{{$index}}" data-target="#emergency_collapse{{$index}}">
+				<p class="panel-title">{{x.name}}</p>
+			</div>
+			<div id="emergency_collapse{{$index}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="emergency_heading{{index}}">
+				<div class="panel-body">
+					<table class="table">
+						<tbody>
+							<tr>
+								<th scope="row">Name: </th>
+								<td>{{x.name}}</td>
+							</tr>
+							<tr>
+								<th scope="row">Relationship: </th>
+								<td>{{x.relationship}}</td>
+							</tr>
+							<tr>
+								<th scope="row">Phone: </th>
+								<td>{{x.phone}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="col-md-12" id="emergency-card" ng-if="emergency_contacts.length == 0">
+			<h3>No emergency contact information available.</h3>
+		</div>
+</div>
+</div>
+

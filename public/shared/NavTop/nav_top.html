@@ -1,0 +1,49 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div>
+      <ul class="nav navbar-nav navbar-left" cg-busy="{promise:promise,templateUrl:'/assets/libs/angular-busy/angular-busy.html',minDuration:0}">
+        <li class="dropdown pull-left">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 
+            <span class="glyphicon glyphicon glyphicon-menu-hamburger"></span> 
+            <span id="dream-nav"> DREAM PROGRAM </span>
+            <img id="dreamshirt" src="/assets/img/dream.png" alt="dream_logo"></a>
+            <ul class="dropdown-menu">
+              <li><a id="nav-drop-home" ui-sref="root">Home</a></li>
+              <li role="separator" class="divider"></li>
+			  <li ng-if="isChair"><a ui-sref="root.attendance">Attendance</a></li>
+              <li ng-if="isChair" role="separator" class="divider"></li>
+              <li><a ui-sref="root.mentee_info">Mentee Info</a></li>
+              <li role="separator" class="divider"></li>
+<!--
+              <li><a ui-sref="root.relationships">Relationships</a></li>
+              <li role="separator" class="divider"></li>
+-->
+<!--
+              <li><a ui-sref="root.journal">Journal</a></li>
+              <li role="separator" class="divider"></li>
+-->
+              <li><a ui-sref='root.profile'>Profile</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="https://fs11.formsite.com/mfoote/receipts/index.html">Receipts</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="http://www.dreamprogram.org/contact">Dream Central</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a ui-sref="root.request_changes">Request Changes</a></li>
+              <li role="separator" class="divider"></li>
+              <!--<li><a ui-sref='authentication.changep'>Change Password</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a ui-sref='authentication.changee'>Change Email</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a ui-sref='authentication.delete'>Delete User</a></li>
+              <li role="separator" class="divider"></li>-->
+              <li><a id="nav-drop-logout" ng-click="logout()">Log Out</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      <div class="userinfo pull-right">{{ email }}</div>
+    </div><!-- /.container-fluid -->
+  </nav>

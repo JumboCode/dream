@@ -1,0 +1,88 @@
+<div class="card col-md-6 x_panel">
+	<div class="col-md-12" class="col-md-12 btn" id="emergency-header" ng-click="update_expanded('emergency-header','emergency-card')">
+		<h3><i class="fa fa-chevron-up"></i> Emergency Contacts </h3>
+	</div>
+<!--<div class="col-md-2" style="margin-top: 13px;">
+<div class="btn btn-link" data-toggle="collapse" data-target="#emergency_panel" ><i class="fa fa-chevron-up"></i></div>
+</div>-->
+<div class="col-md-12 collapse in" id="emergency-card">
+	<div ng-repeat="x in emergency_contacts" class="accordion" role="tablist" aria-multiselectable="true">
+		<div class="panel">
+			<div class="panel-heading collapsed" role="tab" data-toggle="collapse" aria-expanded="false" aria-controls="emergency_collapse{{$index}}" data-target="#emergency_collapse{{$index}}">
+				<p class="panel-title">{{x.name}}</p>
+			</div>
+			<div id="emergency_collapse{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="emergency_heading{{index}}">
+				<div class="panel-body">
+					<table class="table">
+						<tbody>
+							<tr>
+								<th scope="row">Name: </th>
+								<td>{{x.name}}</td>
+							</tr>
+							<tr>
+								<th scope="row">Relationship: </th>
+								<td>{{x.relationship}}</td>
+							</tr>
+							<tr>
+								<th scope="row">Phone: </th>
+								<td>{{x.phone}}</td>
+							</tr>
+							<tr>
+								<th scope="row">Email: </th>
+								<td>{{x.email}}</td>
+							</tr>
+							<tr>
+								<th scope="row">Address: </th>
+								<td>{{x.address}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="card col-md-6 x_panel">
+	<div class="col-md-12" class="col-md-12 btn" id="family-header" ng-click="update_expanded('family-header','family-card')">
+		<h3><i class="fa fa-chevron-up"></i> Family Contacts</h3>
+	</div>
+	<div class="col-md-12 collapse in" id="family-card">
+		<div ng-repeat="x in family_contacts" class="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel">
+				<div class="panel-heading collapsed" role="tab" data-toggle="collapse" aria-expanded="false" aria-controls="family_collapse{{$index}}" data-target="#family_collapse{{$index}}">
+					<p class="panel-title">{{x.name}}</p>
+				</div>
+				<div id="family_collapse{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="family_heading{{index}}">
+					<div class="panel-body">
+						<table class="table">
+							<tbody>
+								<tr>
+									<th scope="row">Name: </th>
+									<td>{{x.name}}</td>
+								</tr>
+								<tr>
+									<th scope="row">Relationship: </th>
+									<td>{{x.relationship}}</td>
+								</tr>
+								<tr>
+									<th scope="row">Phone: </th>
+									<td>{{x.phone}}</td>
+								</tr>
+								<tr>
+									<th scope="row">Email: </th>
+									<td>{{x.email}}</td>
+								</tr>
+								<tr>
+									<th scope="row">Address: </th>
+									<td>{{x.address}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
